@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TODO List Tracker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f0f0f0;
+        }
+        h1 {
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .add-task {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+        input[type="text"] {
+            flex: 1;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            padding: 8px 16px;
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        .category {
+            margin-top: 20px;
+        }
+        h2 {
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 5px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+        }
+        .task-text {
+            flex: 1;
+        }
+        .delete-btn {
+            background: transparent;
+            border: none;
+            color: red;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .task-completed {
+            text-decoration: line-through;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+    <h1>TODO List Tracker</h1>
+    <div class="container">
+        <div class="add-task">
+            <input type="text" id="newTaskInput" placeholder="New task" />
+            <button id="addTaskBtn">Add Task</button>
+        </div>
+        <div class="category">
+            <h2>Daily</h2>
+            <ul id="dailyList"></ul>
+        </div>
+        <div class="category">
+            <h2>Weekly</h2>
+            <ul id="weeklyList"></ul>
+        </div>
+        <div class="category">
+            <h2>Monthly</h2>
+            <ul id="monthlyList"></ul>
+        </div>
+        <div class="category">
+            <h2>Yearly</h2>
+            <ul id="yearlyList"></ul>
+        </div>
+    </div>
+    <script src="logic.js"></script>
+</body>
+</html>
